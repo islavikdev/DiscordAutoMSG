@@ -1,0 +1,244 @@
+#dam-trigger {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: fixed !important;
+    bottom: 120px !important;
+    right: 25px !important;
+    z-index: 10000 !important;
+    width: 60px !important;
+    height: 60px !important;
+    background: linear-gradient(135deg, #8a2be2, #6a0dad) !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 6px 25px rgba(138, 43, 226, 0.5) !important;
+    border: 3px solid rgba(255, 255, 255, 0.3) !important;
+    font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+#dam-trigger:hover {
+    transform: scale(1.15) rotate(8deg) !important;
+    box-shadow: 0 8px 30px rgba(138, 43, 226, 0.6) !important;
+}
+
+#dam-menu {
+    animation: slideInScale 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    backdrop-filter: blur(10px) !important;
+    background: linear-gradient(135deg, #0a0a1a, #1a1a2e) !important;
+    border: 3px solid #8a2be2 !important;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.9) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 9999 !important;
+    border-radius: 16px !important;
+    padding: 20px !important;
+    width: 450px !important;
+    max-height: 80vh !important;
+    font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    color: #ffffff !important;
+    overflow: hidden !important;
+}
+
+@keyframes slideInScale {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9) !important;
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1) !important;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#dam-menu input[type="range"] {
+    -webkit-appearance: none !important;
+    height: 6px !important;
+    background: #2d2f42 !important;
+    border-radius: 3px !important;
+    outline: none !important;
+}
+
+#dam-menu input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    width: 18px !important;
+    height: 18px !important;
+    border-radius: 50% !important;
+    background: #8a2be2 !important;
+    cursor: pointer !important;
+    border: 2px solid white !important;
+    box-shadow: 0 0 8px rgba(138, 43, 226, 0.5) !important;
+    transition: all 0.2s ease !important;
+}
+
+#dam-menu input[type="range"]::-webkit-slider-thumb:hover {
+    background: #6a0dad !important;
+    transform: scale(1.1) !important;
+}
+
+#dam-menu input[type="checkbox"] {
+    width: 18px !important;
+    height: 18px !important;
+    cursor: pointer !important;
+    accent-color: #8a2be2 !important;
+}
+
+#dam-menu input,
+#dam-menu select,
+#dam-menu textarea {
+    transition: all 0.2s ease !important;
+    background: #2d2f42 !important;
+    border: 2px solid #8a2be2 !important;
+    color: white !important;
+    font-weight: 700 !important;
+    border-radius: 6px !important;
+}
+
+#dam-menu input:focus,
+#dam-menu select:focus,
+#dam-menu textarea:focus {
+    outline: none !important;
+    border-color: #ff6b6b !important;
+    box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.2) !important;
+}
+
+#dam-menu button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    font-weight: 800 !important;
+    border: none !important;
+    cursor: pointer !important;
+    border-radius: 6px !important;
+}
+
+#dam-menu button:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+#dam-menu button:active {
+    transform: translateY(0) !important;
+}
+
+#dam-tasks-list {
+    flex: 1 !important;
+    overflow-y: auto !important;
+    max-height: 250px !important;
+    min-height: 120px !important;
+    background: #2d2f42 !important;
+    border-radius: 8px !important;
+    padding: 12px !important;
+    border: 2px solid #8a2be2 !important;
+}
+
+#dam-configs-list {
+    max-height: 80px !important;
+    overflow-y: auto !important;
+    font-size: 11px !important;
+}
+
+#dam-tasks-list::-webkit-scrollbar {
+    width: 6px !important;
+}
+
+#dam-tasks-list::-webkit-scrollbar-track {
+    background: #1a1b2e !important;
+    border-radius: 3px !important;
+}
+
+#dam-tasks-list::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #8a2be2, #6a0dad) !important;
+    border-radius: 3px !important;
+}
+
+#dam-tasks-list::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #6a0dad, #8a2be2) !important;
+}
+
+#dam-configs-list::-webkit-scrollbar {
+    width: 4px !important;
+}
+
+#dam-configs-list::-webkit-scrollbar-track {
+    background: rgba(67, 181, 129, 0.1) !important;
+    border-radius: 2px !important;
+}
+
+#dam-configs-list::-webkit-scrollbar-thumb {
+    background: rgba(67, 181, 129, 0.3) !important;
+    border-radius: 2px !important;
+}
+
+#dam-menu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 130px 80px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 160px 30px, #eee, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+#dam-menu * {
+    font-weight: 700 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+#dam-menu h3 {
+    font-weight: 900 !important;
+    text-shadow: 0 3px 12px rgba(255, 107, 107, 0.6) !important;
+}
+
+.dam-notification {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    z-index: 10002 !important;
+    background: #43b581 !important;
+    color: white !important;
+    padding: 12px 16px !important;
+    border-radius: 6px !important;
+    font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 800 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    animation: slideInRight 0.3s ease-out !important;
+    max-width: 300px !important;
+    word-break: break-word !important;
+}
+
+@media (max-height: 700px) {
+    #dam-menu {
+        max-height: 90vh !important;
+    }
+
+    #dam-tasks-list {
+        max-height: 200px !important;
+    }
+}
