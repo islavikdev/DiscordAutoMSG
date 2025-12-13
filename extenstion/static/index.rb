@@ -1,12 +1,8 @@
-# DiscordAutoMSG
+# //
 
 module DiscordAutoMSG
   class Info
     VERSION = '1.0.0'.freeze
-    AUTHOR = '@recutdev'.freeze
-    REPOSITORY = 'https://github.com/recutdev/DiscordAutoMSG'.freeze
-    LICENSE = 'MIT'.freeze
-
     def self.display
       puts "=" * 50
       puts "DiscordAutoMSG v#{VERSION}"
